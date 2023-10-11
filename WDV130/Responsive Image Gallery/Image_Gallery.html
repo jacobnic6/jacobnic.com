@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Large Image Gallery</title>
+
+<!-- The following HTML command is required when using CSS Media Queries.
+     It tells the browser to look at the screen width of the Device not the browser. -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type = "text/css">
+
+	.image-gallery { 
+		width:1030px; 
+		margin: 0 auto;
+		padding: 5px;
+		border:2px solid navy;
+		background-color:#C3BEBE;
+	}
+	
+	img  {
+		   margin: 5px;
+		   border:1px solid black;
+	}
+	
+	h4  {
+			text-align: center;
+	}
+	
+
+	
+	/*
+		The following CSS code is used to process the Responsive portion of the page using a CSS Media Query. 
+		The @media rule will activate when the page size goes less than 500px wide.
+		The CSS rules within the @media command will then be processed. Resizing the display area.
+		When the page is enlarged beyond 500px wide the original CSS will will be restored.
+		
+		NOTE: This technique still requires the download of both the large and the small image to the 
+		mobile device. The example demonstrates how a CSS Media query can be used to modify the presentation
+		of the page. Other Media Query techniques are recommended for Responsive Design efficiency.
+	*/
+	
+	.mobileSize	{
+		display:none;
+	}	
+	
+	@media only screen and (max-width:500px) {
+		.image-gallery	{
+			width:230px;
+			margin:auto;	
+		}
+		
+		.desktopSize {
+			display:none;
+		}
+		
+		.mobileSize {
+			display:inline;	
+		}
+	}
+
+</style>
+
+</head>
+
+<body>
+<h4>Below is an image gallery.</h4>
+
+<!-- In this exercise you optimized images two different sizes - one at 500 pixesl and one at 100 pixels. 
+In the lines of text below place the name of the optimized images in the appropriate size. The first line is an example.-->
+<div class="image-gallery">
+    
+    <img class="desktopSize" src="images_500/puppy_500.jpg" alt="puppy">
+    <img class="mobileSize" src="images_100/puppy_100.jpg" alt="puppy">
+    
+    <img class="desktopSize" src="images_500/blackLab_500.jpg" alt="Black Lab">
+    <img class="mobileSize" src="images_100/blackLab_100.jpg" alt="Black Lab">
+
+    <img class="desktopSize" src="images_500/car_500.jpg"  alt="Car">
+    <img class="mobileSize" src="images_100/car_100.jpg"  alt="Car">
+    
+    <img class="desktopSize" src="images_500/duck_500.jpg" alt="Duckling">
+    <img class="mobileSize" src="images_100/duck_100.jpg"  alt="Duckling">
+    
+    <img class="desktopSize" src="images_500/egret_500.jpg" alt="Egret">
+    <img class="mobileSize" src="images_100/egret_100.jpg" alt="Egret">
+    
+     <img class="desktopSize" src="images_500/frenchbulldog_500.jpg"  alt="French Bulldog">
+    <img class="mobileSize" src="images_100/frenchbulldog_100.jpg" alt="French Bulldog">   
+    
+    <img class="desktopSize" src="images_500/goldeneagle_500.jpg" alt="Golden Eagle">
+    <img class="mobileSize" src="images_100/goldeneagle_100.jpg" alt="Golden Eagle">    
+    
+    <img class="desktopSize" src="images_500/gorilla_500.jpg" alt="Gorilla">
+    <img class="mobileSize" src="images_100/gorilla_100.jpg" alt="Gorilla">    
+    
+    
+</div>
+
+</body>
+</html>
